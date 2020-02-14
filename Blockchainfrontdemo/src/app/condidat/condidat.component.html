@@ -1,0 +1,40 @@
+<div class="card-body">
+          
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Age</th>
+            <th scope="col">Nombre de vote</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+           
+
+            <tr *ngFor="let cond of service.List" >
+              
+              <td>{{cond.Nom}}</td>
+              <td>{{cond.Prenom}}</td>
+              <td>{{cond.Age}}</td>
+              <td>{{cond.nombreVote}}</td>
+              
+
+            <td>
+              <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-danger"(click)="vote(cond)"><i class="fas fa-info-circle">Vote</i></button>
+                
+                </div>
+                </div>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+     
+    </div>
+
